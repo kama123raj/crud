@@ -1,0 +1,30 @@
+.main{
+    display: flex;
+    
+    nav{
+        width: 150px;
+        background-color: #12344d;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 30px 15px;
+        height: 100vh;
+        overflow-y: scroll;
+        a{
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding:5px 0;
+            font-size: 15px;
+            &:hover{
+                color: #e73e0b;
+            }
+        }
+    }
+    .content{
+        width:calc(100% - 150px);
+        margin:0 0 0 auto;
+        padding:30px 30px;
+    }
+}

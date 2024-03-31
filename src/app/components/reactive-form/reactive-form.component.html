@@ -1,0 +1,30 @@
+<p>reactive-form works!</p>
+<br>
+<!-- <form [formGroup]="useForm">
+    <input type="text" placeholder="firstName" formControlName="firstName"> <br>
+    <input type="text" placeholder="lastName" formControlName="lastName"> <br>
+    <input type="text" placeholder="email" formControlName="email"> <br>
+    <input type="text" placeholder="mobile" formControlName="mobile"> <br>
+    <input type="radio" value="male"  formControlName="gender"> Male <br>
+    <input type="radio" value="female"  formControlName="gender"> female <br>
+    <button type="submit" (click)="submitForm()">Submit Form</button>
+</form> -->
+
+<br>
+<br>
+<br>
+<br>
+<form [formGroup]="bookForm">
+
+    <input type="text" placeholder="id" formControlName="id"> <br>
+    <input type="text" placeholder="BookName" formControlName="BookName"> <br>
+    <input type="text" placeholder="author" formControlName="author"> <br>
+
+    <button type="submit" (click)="addBook()" [disabled]="!bookForm.valid">add book</button> <br>
+    <button type="submit" (click)="onSave()"  >Save book</button> <br>
+    <button type="submit" (click)="getBook()"  >Show  book</button> <br>
+    
+   
+
+
+</form>

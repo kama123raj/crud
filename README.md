@@ -1,27 +1,31 @@
-# Zuper
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
+API details: 
+ 
+1.  URL: GET https://zuper.free.beeceptor.com/jobs
+2.  URL: GET https://zuper.free.beeceptor.com/jobs/meta
+ 
 
-## Development server
+Details of the design:
+1.	Side Navigation Bar with 3 pages– Dashboard, Jobs, Settings. Icons can be used from https://heroicons.com/
+2.	Navigation bar 
+3.	Listing page
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The Listing page consists of 
+1.	Breadcrumb bar
+2.	Action navbar 
+3.	Listing Table
 
-## Code scaffolding
+Action Navbar:
+The action navbar contains the following:
+1.	Search input
+2.	Filter button
+3.	Customize – Upon clicking on this button, we will be opening a popover showing the list of columns where the user can choose which columns are to be shown or hidden
+4.  They can also drag-drop 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+filter and paging 
+1.  ‘Go To’ input to navigate to the page mentioned in the input.
+2.  
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-	This column is sortable since ‘is_sortable’ 

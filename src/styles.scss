@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/css/font.scss';
+@import 'assets/css/theme.scss';
+
+@import 'assets/css/main.scss';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.mat-mdc-checkbox label{
+    display: none;
+}
+
+input {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  button {
+    min-width: 100px;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: rgb(44, 155, 0);
+    color: #fff;
+    border: solid 2px rgb(44, 155, 0);
+    margin-right: 30px;
+    display: inline-block;
+   
+  }
+  button:hover {
+    background-color: rgb(196, 78, 0);
+    border-color: rgb(196, 78, 0);
+  }
+  button:disabled{
+    opacity: 0.3;
+  }
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(44, 155, 0);
+  }
+  a:hover {
+    color: rgb(196, 78, 0);
+  }
+  

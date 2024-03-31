@@ -1,5 +1,7 @@
 
-<div class="conatainer">
+
+
+<div class="container">
 <div class="main">
     <nav>
       <a routerLink="/">Observable </a>
@@ -11,6 +13,8 @@
       <a routerLink="map">Map </a>
       <a routerLink="filter">Filter </a>
       <a routerLink="distinct">distinct </a>
+      <a routerLink="skip">skip </a>
+      <a routerLink="take">take </a>
 
       
       <hr>
@@ -20,12 +24,47 @@
       <hr>
       <br>
       <a routerLink="reactive-form">Reactive Form </a>
+      <a routerLink="ngZone">ngZone</a>
+      <a routerLink="scss">scss</a>
+      <a routerLink="auth">Authendication</a>
+      <a routerLink="trackBy">trackBy *For</a>
+      <a routerLink="chnage-Detection">chnage-Detection</a>
+      <a routerLink="crud">CRUD Operations</a>
 
       
-   
+
+      
+      
     </nav>
     <div class="content">
+      <!-- <header> 
+        <a routerLink="operators">Operators</a>
+      </header> -->
         <router-outlet></router-outlet>
+       
+
+        <!-- <div class="product">
+          <div class="product__image">
+            <img src="">
+          </div>
+          <div class="product__content">
+            <h2>Product name</h2>
+            <p class="product__text">product__price product__price text example... </p>
+            <p class="product__price">$ 125 </p>
+          </div>
+        </div>
+          -->
+
+
+          <div class="card" *ngFor="let item of pagedata">
+        
+            <p>{{item.name}}</p>
+
+          </div>
+         
+
+        
+
     </div>
     
 </div>

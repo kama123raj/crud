@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 import { BooksService } from 'src/app/services/books.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class ReactiveFormComponent {
 
   databasebook:any[] =  [];
 
-  constructor(private _book:BooksService) {}
+  constructor(private _book:BooksService, private _auth:AuthService) {}
 
 
   ngOnInit(){
@@ -57,14 +58,12 @@ export class ReactiveFormComponent {
         console.log(err); 
       }
     })
-   
-    
   }
   getBook(){
     this._book.getdata().subscribe({
       next: (data) => {
         this.databasebook = data;
-        console.log(data.data);  
+        console.log(data);  
       },
       error: (err) => {
         console.log(err); 

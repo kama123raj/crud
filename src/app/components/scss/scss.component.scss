@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+ $app-red:red;
+ $font-small:14px;
+ $font-family:'Roboto', sans-serif;
+
+ $sizes:40px,50px,60px;
+
+
+
+h2{
+    color: $app-red;
+    font-size: $font-small;
+    font-family: $font-family;
+}
+
+@each $size in $sizes {
+    .icon-#{$size} {
+        height: $size;
+        width: $size;
+        background-color: #ccc;
+        margin-bottom: 15px;
+    }
+
+}
+.welcome {
+    > *{
+        background-color: red;
+        margin-bottom: 15px;
+        padding: 15px;
+        max-width: 200px;
+    }
+    &-2{
+        height: 50px;
+        width: 50px;
+        border:solid 1px;
+        background-color: orange;
+    }
+}
+
+@mixin corner-icon($name, $top-or-bottom, $left-or-right) {
+    .icon-#{$name} {
+      background-image: url("/icons/#{$name}.svg");
+      position: absolute;
+      #{$top-or-bottom}: 0;
+      #{$left-or-right}: 0;
+    }
+  }
+  
+  @include corner-icon('mail', 'top', 'left');

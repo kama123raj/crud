@@ -21,7 +21,7 @@ export class DebounceTimeComponent {
     // })
 
     this.searchForm =  new FormGroup ({
-      searchInput: new FormControl('start Search')
+      searchInput: new FormControl('')
     })
   }
 
@@ -29,9 +29,8 @@ export class DebounceTimeComponent {
     // let val = this.searchForm.value.searchInput.valueChnages
 
     this.searchForm.get('searchInput')?.valueChanges.pipe(
-      debounceTime(3000)
+      debounceTime(1000)
     ).subscribe((data)=>{
-
       console.log(data, 'data')
     })
      

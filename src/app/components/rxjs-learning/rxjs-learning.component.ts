@@ -1,18 +1,23 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, NgModule } from '@angular/core';
+import { Component, ElementRef, HostBinding, NgModule, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { BooksService } from 'src/app/services/books.service';
 
 @Component({
   selector: 'app-rxjs-learning',
   templateUrl: './rxjs-learning.component.html',
   styleUrls: ['./rxjs-learning.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated,
+  
 })
 export class RxjsLearningComponent {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private el: ElementRef, private book:BooksService, private activated : ActivatedRoute) {}
+  @HostBinding('class.green') isVisibleInView = false;
 
   agent!: Observable<string>;
 
-  url: any;
+  url: any; 
 
   ngOnInit(): void {
     this.url = 'https://dummyjson.com/products/1';
@@ -20,6 +25,15 @@ export class RxjsLearningComponent {
     setTimeout(() => {
       this.url = 'https://dummyjson.com/products/1';
     }, 10000);
+    let fullPage = this.activated.snapshot.data['fullPage'];
+    console.log(fullPage)
+
+    this.http.get(this.url).subscribe({
+      next: (data)=>{
+        console.log(data)
+      }
+    })
+
 
     this.agent = new Observable((obs) => {
       obs.next('raj');
@@ -64,4 +78,12 @@ export class RxjsLearningComponent {
     console.log(arr2, 'mapping');
     console.log(mapping, 'mapping');
   }
+
+
+  clik(){
+  this.book.addOne()
+  }
+ 
+ 
+
 }

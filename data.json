@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "title": "32r23",
+      "body": "888888888",
+      "id": 1
+    },
+    {
+      "title": "r324r32",
+      "body": "r32r32",
+      "id": 2
+    },
+    {
+      "title": "r23r21",
+      "body": "3r21r",
+      "id": 3
+    },
+    {
+      "title": "2er21r",
+      "body": "21r21r",
+      "id": 4
+    },
+    {
+      "title": "2er21r",
+      "body": "21r21r",
+      "id": 5
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

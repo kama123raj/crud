@@ -25,6 +25,7 @@ ngAfterViewInit(){
  
   clicking(){
  const btnObs =  fromEvent(this.buttonFrom?.nativeElement, 'click');
+ console.log(btnObs)
  btnObs.subscribe((data)=>{
   console.log(data, 'take')
  })

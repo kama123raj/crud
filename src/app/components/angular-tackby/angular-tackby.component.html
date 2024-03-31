@@ -1,0 +1,13 @@
+<p>angular-tackby works!</p>
+
+<p>Track by function use for page performance when adding and removing data from an Array values</p>
+
+<table>
+    <li *ngFor="let item of tableArray; trackBy: customeFunction">
+     <p>Name : {{item.Fname}}</p> 
+    <p>Gender :{{item.gender}}</p>
+    </li>
+</table>   
+
+
+<button (click)="clicking()">Change Data </button>

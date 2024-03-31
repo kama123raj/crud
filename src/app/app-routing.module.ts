@@ -11,13 +11,27 @@ import { CustomePipeComponent } from './components/custome-pipe/custome-pipe.com
 import { FilterComponent } from './components/filter/filter.component';
 import { DistinctComponent } from './components/distinct/distinct.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { LetVatConstComponent } from './components/ngZOne/let-vat-const.component';
+import { ScssComponent } from './components/scss/scss.component';
+import { AngularTackbyComponent } from './components/angular-tackby/angular-tackby.component';
+import { SkipComponent } from './components/skip/skip.component';
+import { TakeComponent } from './components/take/take.component';
 
 const routes: Routes = [
  {
-  path:'', component:RxjsLearningComponent
+  path:'', component:RxjsLearningComponent,
+  data: {
+    fullPage:false
+  }
  },
  {
-  path:'of', component:OFComponent
+  path:'operators',  loadChildren: () => import('./operators/operators.module').then(m => m.OperatorsModule)
+ },
+ {
+  path:'of', component:OFComponent,
+  data: {
+    fullPage:true
+  }
  },
  {
   path:'from', component:FromComponent
@@ -40,8 +54,18 @@ const routes: Routes = [
  {
   path:'distinct', component:DistinctComponent
  },
-
- 
+ {
+  path:'trackBy', component:AngularTackbyComponent
+ },
+ {
+path:'chnage-Detection', component:ScssComponent
+ },
+ {
+  path:'skip', component:SkipComponent
+  },
+  {
+    path:'take', component:TakeComponent
+    },
 
 
 //  Pipe 
@@ -51,7 +75,20 @@ const routes: Routes = [
  {
   path:'reactive-form', component:ReactiveFormComponent
  },
-
+ {
+  path:'ngZone', component:LetVatConstComponent
+ },
+  {
+  path:'scss', component:ScssComponent
+ },
+ {
+  path: 'crud',
+  loadChildren: () => import('./module/crud/crud.module').then(m => m.CrudModule)
+},
+ {
+  path: 'auth',
+  loadChildren: () => import('./module/auth/auth.module').then(m => m.AuthModule)
+}
  
  
 ];

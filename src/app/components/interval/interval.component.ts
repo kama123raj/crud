@@ -17,9 +17,9 @@ export class IntervalComponent {
 
       const seq$ = interval(500)
 
-     seq$.subscribe((num)=>{
-      if(num < 5){
-      console.log(data + num)
+     seq$.subscribe((itervalCounting:number)=>{
+      if(itervalCounting < 5){
+      console.log(data +'--'+ itervalCounting)
       }
      })
      

@@ -28,3 +28,47 @@
         padding:30px 30px;
     }
 }
+
+header{
+    margin-bottom: 50px;
+    a{
+        padding-right: 30px;
+    }
+}
+
+.counter{
+    max-width: 200px;
+    display: flex;
+    p{
+        width: 50px;
+        line-height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+}
+
+.product{
+    max-width: 300px;
+    &__image{
+        height: 150px;
+        background-color: #e73e0b;
+    }
+    &__name{
+        font-size: 26px;
+        line-height: 32px;
+        color: #000;
+    }
+    &__content{
+        padding:15px;
+    }
+    &__text{
+        margin-bottom: 10px;
+    }
+    &__price{
+        font-size: 18px;
+        color: #6666;
+        font-weight: bold;
+    }
+}

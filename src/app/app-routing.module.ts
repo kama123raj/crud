@@ -18,12 +18,12 @@ import { SkipComponent } from './components/skip/skip.component';
 import { TakeComponent } from './components/take/take.component';
 
 const routes: Routes = [
- {
-  path:'', component:RxjsLearningComponent,
-  data: {
-    fullPage:false
-  }
- },
+//  {
+//   path:'', component:RxjsLearningComponent,
+//   data: {
+//     fullPage:false
+//   }
+//  },
  {
   path:'operators',  loadChildren: () => import('./operators/operators.module').then(m => m.OperatorsModule)
  },

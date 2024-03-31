@@ -41,24 +41,16 @@
         <a routerLink="operators">Operators</a>
       </header> -->
         <router-outlet></router-outlet>
-       
-
-        <!-- <div class="product">
-          <div class="product__image">
-            <img src="">
-          </div>
-          <div class="product__content">
-            <h2>Product name</h2>
-            <p class="product__text">product__price product__price text example... </p>
-            <p class="product__price">$ 125 </p>
-          </div>
-        </div>
-          -->
-
-
-          <div class="card" *ngFor="let item of pagedata">
+     
+          <div class="card" *ngFor="let item of pagedata; let i=index">
         
-            <p>{{item.name}}</p>
+            <table>
+              <tr>
+                <td style="min-width: 50px;"><p>{{i + 1}}</p></td>
+                <td><p>{{item.name}}</p></td>
+                <td><p>{{item.email}}</p></td>
+              </tr>
+            </table>
 
           </div>
          
